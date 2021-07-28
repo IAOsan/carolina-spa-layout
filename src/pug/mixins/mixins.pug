@@ -1,0 +1,53 @@
+mixin product(img, title='Inserta titulo', price='0.00')
+   article.product.card.px-0
+      a.link(href="producto.html") 
+         img.card-img-top(src=`assets/img/${img}`, alt=title)
+         .card-body
+            h3.heading.card-title.text-center.text-uppercase #{title}
+            if block
+               block
+            else 
+               p.desc.card-text No description
+            p.price.lead.text-center.mb-0 #{price}
+
+mixin service(img, title='Inserta titulo')
+   article.service
+      img.image.img-fluid(src=`assets/img/${img}`, alt=`Imagen ${title[0]} ${title[1]}`)
+      .row.no-gutters.justify-content-center
+         .info.col-md-10
+            h3.heading-compound.mt-3 #{title[0]}
+               span.d-block.text-uppercase #{title[1]}
+            a.btn.btn-pink.btn-block.text-uppercase.py-3.mt-4(href="servicios.html") leer más
+
+mixin hero(img='nosotros.jpg', title='Inserta titulo')
+   .container.p-lg-0.mt-4
+      .row.no-gutters
+         .hero.col-12
+            img.img-fluid(src=`assets/img/${img}`, alt=title)
+            h2.heading.text-uppercase.d-none.d-md-block.py-3.px-5 #{title}
+
+mixin mainContent(title='Inserta titulo', className='col-lg-8')
+   main(class=`main-content ${className}`)
+      h1.d-block.d-md-none.text-uppercase.text-center.u-text-pink #{title}
+      if block
+         block 
+
+mixin asideContent(title='Inserta titulo', className='p-3', titleClass='')
+   aside.col-lg-4.p-lg-0
+      .sidebar(class=`${className}`)
+         h2.text-center.text-uppercase(class=`${titleClass}`) #{title}
+         if block
+            block
+
+mixin gallery(...images)
+   .gallery.pt-4
+      .row
+         each image,index in images 
+            .col-4
+               a.link(href="#" data-target=`#imagen-${index+1}` data-toggle="modal") 
+                  img.img-fluid(src=`assets/img/${image}`, alt=`Imagen galeria ${index+1}`)
+               .modal.fade(id=`imagen-${index+1}` tabindex="-1" role="dialog" aria-labelledby=`imagen ${index+1}` aria-hidden="true")
+                  .modal-dialog.modal-lg.modal-dialog-centered(role="document")
+                     .modal-content
+                        .modal-body
+                           img.img-fluid(src=`assets/img/galeria_grande_0${index+1}.jpg`, alt="")

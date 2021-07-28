@@ -1,0 +1,49 @@
+extends ./pug/templates/innerpage
+block nosotros-hero
+   +hero('nosotros.jpg', 'Nosotros')
+block nosotros-main
+   +mainContent('Nosotros', 'col-lg-8 pl-lg-0')
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil atque laboriosam natus doloribus impedit. Repudiandae doloribus, cum, tempora adipisci minima deleniti blanditiis eum dolores eaque cupiditate similique dignissimos aut expedita voluptatibus minus maiores saepe magnam ducimus accusamus. Ex repudiandae quibusdam impedit rem sit. Nostrum rerum adipisci omnis at, doloribus eveniet.
+
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum animi, temporibus magnam delectus voluptatem officiis fuga eligendi quia quibusdam, nemo adipisci ut dolorum laudantium maiores, natus aliquam fugiat quis? Hic dolor officia impedit nobis ducimus non itaque eaque recusandae doloribus?
+
+      h2.heading-compound.text-center.mt-5 conoce nuestras
+         span.d-block.text-uppercase instalaciones
+      +gallery('galeria_mini_01.jpg', 'galeria_mini_02.jpg', 'galeria_mini_03.jpg')
+   +asideContent('horarios', 'px-3 py-4 mt-5 mt-lg-0 schedule aside-nosotros', 'mt-5 mt-lg-0')
+      p.lead.mt-3.text-center Morbi risus mi, feugiat non nulla eu, dapibus sagittis turpis. Praesent vel dignissim libero. Morbi vel porttitor orci. Integer non elit eu odio vulputate aliquet at sed odio. 
+      table.table.mt-4.text-white.text-center
+         thead.table-head
+            tr
+               th Día
+               th De
+               th Hasta
+         tbody.table-body
+            tr
+               td Lunes
+               td 09:00
+               td 19:00
+            tr
+               td Martes
+               td 09:00
+               td 19:00
+            tr
+               td Miércoles
+               td 09:00
+               td 19:00
+            tr
+               td Jueves
+               td 09:00
+               td 19:00
+            tr
+               td Viernes
+               td 09:00
+               td 19:00
+            tr
+               td Sábado
+               td 10:00
+               td 14:00
+            tr
+               td Domingo
+               td Cerrado
+               td Cerrado

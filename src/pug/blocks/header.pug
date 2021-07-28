@@ -1,0 +1,40 @@
+.container
+   .row.justify-content-md-between.align-items-center
+      .col-lg-4
+         a(href="index.html") 
+            img.d-block.img-fluid.mx-auto.py-4(src="assets/img/logo.svg", alt="Logotipo")
+      .social.col-lg-4.text-center.text-lg-right
+         ul.list
+            li.item
+               a.link(href="http://facebook.com")
+                  span.sr-only Facebook
+            li.item
+               a.link(href="http://twitter.com")
+                  span.sr-only Twitter
+            li.item
+               a.link(href="http://instagram.com")
+                  span.sr-only Instagram
+            li.item
+               a.link(href="http://pinterest.com")
+                  span.sr-only Pinterest
+            li.item
+               a.link(href="http://youtube.com")
+                  span.sr-only Youtube
+.navigation.mt-3
+   nav.navbar.navbar-expand-md.navbar-light.bg-faded
+      button.navbar-toggler.bg-white(type="button" data-toggle="collapse" data-target="#nav-main" aria-label="Mostrar navegacion")
+         span.navbar-toggler-icon
+      a.navbar-brand.d-md-none.text-white(href="#") Carolina Spa
+      .container
+         #nav-main.collapse.navbar-collapse.w-100.u-transition-s
+            ul.nav.nav-justified.w-100.flex-column.flex-sm-row.text-capitalize.mt-2.mt-md-0
+               li.nav-item
+                  a.nav-link(href="index.html") inicio
+               li.nav-item
+                  a.nav-link(href="nosotros.html") nosotros
+               li.nav-item
+                  a.nav-link(href="servicios.html") servicios 
+               li.nav-item
+                  a.nav-link(href="productos.html") productos 
+               li.nav-item
+                  a.nav-link(href="contacto.html") contacto

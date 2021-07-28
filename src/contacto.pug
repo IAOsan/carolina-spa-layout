@@ -1,0 +1,22 @@
+extends ./pug/templates/innerpage
+block contacto-hero
+   +hero('contacto.jpg', 'contacto')
+block contacto-main
+   +mainContent('contacto', 'col-lg-8 mx-auto')
+      form.form--contacto.p-5.my-5.needs-validation(novalidate)
+         .form-group
+            label.text-capitalize(for="inputName") nombre:
+            input.form-control(id="inputName" type="text" placeholder="Tu nombre" required)
+            .valid-feedback Correcto
+            .invalid-feedback Por favor, ingresa tu nombre
+         .form-group
+            label.text-capitalize(for="inputEmail") correo:
+            input.form-control(id="inputEmail" type="text" placeholder="Tu correo" required)
+            .valid-feedback Correcto
+            .invalid-feedback Por favor, ingresa tu correo
+         .form-group
+            label.text-capitalize(for="inputMessage") mensaje:
+            textarea.form-control(id="inputMessage" placeholder="Tu mensaje" required)
+            .valid-feedback Correcto
+            .invalid-feedback Por favor, escribe un mensaje
+         button.btn.btn-mint.btn-block.p-3.text-uppercase(type="submit") Enviar

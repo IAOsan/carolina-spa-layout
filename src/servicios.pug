@@ -1,0 +1,37 @@
+extends ./pug/templates/innerpage
+block servicios-hero
+   +hero('servicios.jpg', 'Servicios')
+block servicios-main
+   +mainContent('Servicios')
+      #accordion-services.accordion-service
+         .card
+            #servicio-1.card-header
+               h2.mb-0
+                  button.btn.btn-link(data-toggle="collapse" data-target="#descripcion-1" aria-expanded="true" aria-controls="descripcion-1") Servicio 1
+            #descripcion-1.collapse.show.u-transition-s(aria-labelledby="Servicio 1" data-parent="#accordion-services")
+               .card-body Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus praesentium, doloremque molestias ullam molestiae eum nobis, nisi et quas mollitia! Quis vero illum minima velit itaque, eum distinctio dicta temporibus! Perferendis, esse officia, explicabo necessitatibus quo et expedita rerum ullam aliquid repudiandae id repellat voluptas sed velit voluptatum totam nemo minima laboriosam, doloribus debitis tempora quam consectetur aliquam dolor. Delectus nemo aspernatur ad sit esse voluptas exercitationem doloribus vitae!
+         .card
+            #servicio-2.card-header
+               h2.mb-0
+                  button.btn.btn-link(data-toggle="collapse" data-target="#descripcion-2" aria-expanded="false" aria-controls="descripcion-2") Servicio 2
+            #descripcion-2.collapse.u-transition-s(aria-labelledby="Servicio 2" data-parent="#accordion-services")
+               .card-body Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus praesentium, doloremque molestias ullam molestiae eum nobis, nisi et quas mollitia! Quis vero illum minima velit itaque, eum distinctio dicta temporibus! Perferendis, esse officia, explicabo necessitatibus quo et expedita rerum ullam aliquid repudiandae id repellat voluptas sed velit voluptatum totam nemo minima laboriosam, doloribus debitis tempora quam consectetur aliquam dolor. Delectus nemo aspernatur ad sit esse voluptas exercitationem doloribus vitae!
+         .card
+            #servicio-3.card-header
+               h2.mb-0
+                  button.btn.btn-link(data-toggle="collapse" data-target="#descripcion-3" aria-expanded="false" aria-controls="descripcion-3") Servicio 3
+            #descripcion-3.collapse.u-transition-s(aria-labelledby="Servicio 3" data-parent="#accordion-services")
+               .card-body Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus praesentium, doloremque molestias ullam molestiae eum nobis, nisi et quas mollitia! Quis vero illum minima velit itaque, eum distinctio dicta temporibus! Perferendis, esse officia, explicabo necessitatibus quo et expedita rerum ullam aliquid repudiandae id repellat voluptas sed velit voluptatum totam nemo minima laboriosam, doloribus debitis tempora quam consectetur aliquam dolor. Delectus nemo aspernatur ad sit esse voluptas exercitationem doloribus vitae!
+   +asideContent('Nuevos Clientes', 'p-4 mt-5 mt-lg-0', 'my-3')
+      p.lead.text-center Recibe 20% de descuento con este cupón
+      .coupon.py-5.my-4
+         p.text.text-uppercase.text-center
+            span.paragraph.d-block 20% descuento
+            span.paragraph.d-block en todos los servicios
+block servicios-cita
+   .date.container-fluid.py-5.mt-5
+      .row.justify-content-center.align-items-center.text-white
+         .col-md-8.col-lg-6.text-center
+            h2.heading.text-uppercase realiza una cita
+            p.text.mt-5.mb-4 Maecenas rhoncus, augue sed volutpat suscipit, augue felis laoreet lectus, vel convallis diam est eu lectus. Mauris metus orci, tempus nec bibendum eget, pulvinar at metus. Etiam egestas sodales auctor. 
+            a.btn.btn-mint.btn-lg.text-uppercase(href="contacto.html") leer más

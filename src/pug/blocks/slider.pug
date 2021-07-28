@@ -1,0 +1,25 @@
+.container
+   article#main-slider.carousel.slide.mt-4(data-ride="carousel")
+      ol.carousel-indicators
+         li.active(data-target="#main-slider" data-slide-to="0")
+         li(data-target="#main-slider" data-slide-to="1")
+         li(data-target="#main-slider" data-slide-to="2")
+      .carousel-inner(role="listbox")
+         figure.carousel-item.active.u-transition-s
+            img.d-block.w-100(src="assets/img/slide_01.jpg", alt="Nuestras instalaciones")
+            figcaption.carousel-caption
+               h3.text-uppercase nuevas instalaciones
+         figure.carousel-item.u-transition-s
+            img.d-block.w-100(src="assets/img/slide_02.jpg", alt="Nuestros servicios")
+            figcaption.carousel-caption
+               h3.text-uppercase conoce nuestros servicios
+         figure.carousel-item.u-transition-s
+            img.d-block.w-100(src="assets/img/slide_03.jpg", alt="Promoción")
+            figcaption.carousel-caption
+               h3.text-uppercase Nuevo sitio web, 2x1 en todos los servicios
+      a.carousel-control-prev(href="#main-slider" role="button" data-slide="prev") 
+         span.carousel-control-prev-icon(aria-hidden="true")
+         span.sr-only Diapositiva previa
+      a.carousel-control-next(href="#main-slider" role="button" data-slide="next") 
+         span.carousel-control-next-icon(aria-hidden="true")
+         span.sr-only Diapositiva siguiente
