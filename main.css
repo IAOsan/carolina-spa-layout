@@ -267,10 +267,11 @@
 }
 .schedule .background {
   min-height: 25rem;
+  background-color: rgba(0,0,0,.2);
+  background: url("assets/img/bg_horarios.jpg") center no-repeat;
   background-size: cover;
-  background: url("../assets/img/bg_horarios.jpg") center no-repeat;
+  padding: 0;
 }
-
 .date {
   background: url("assets/img/bg_citas.jpg") center no-repeat;
   background-attachment: fixed;
