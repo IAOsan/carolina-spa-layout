@@ -4,6 +4,7 @@
 /* -------------------------------------------------------------------------- */
 :root {
   --c-primary: #e082a8;
+  --c-primary-l: rgba(224, 130, 168, 0.1);
   --c-secondary: #8ed3cc;
   --c-secondary-d: #6ba09b;
   --c-gray-l: #979797;
@@ -17,6 +18,14 @@
 /* -------------------------------------------------------------------------- */
 /*                             general page styles                            */
 /* -------------------------------------------------------------------------- */
+body {
+  background-color: #f8f8f8;
+}
+
+footer {
+  background-color: var(--c-primary-l);
+}
+
 .main-content p {
   font-size: 1.2rem;
   line-height: 2.2rem;
@@ -30,12 +39,42 @@
   color: var(--c-primary);
   line-height: 1;
 }
+@media only screen and (max-width: 48em) {
+  .heading-compound {
+    font-size: 3.42rem;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .heading-compound {
+    font-size: 3.23rem;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .heading-compound {
+    font-size: 3.04rem;
+  }
+}
 .heading-compound span {
   font-family: "Lato", sans-serif;
   font-size: 2.4rem;
   margin-top: -0.5rem;
   color: #000;
   letter-spacing: 0.1rem;
+}
+@media only screen and (max-width: 48em) {
+  .heading-compound span {
+    font-size: calc(2.4rem - (2.4rem * 0.1));
+  }
+}
+@media only screen and (max-width: 36em) {
+  .heading-compound span {
+    font-size: calc(2.4rem - (2.4rem * 0.15));
+  }
+}
+@media only screen and (max-width: 30em) {
+  .heading-compound span {
+    font-size: calc(2.4rem - (2.4rem * 0.2));
+  }
 }
 
 .u-transition {
@@ -267,13 +306,12 @@
 }
 .schedule .background {
   min-height: 25rem;
-  background-color: rgba(0,0,0,.2);
-  background: url("assets/img/bg_horarios.jpg") center no-repeat;
   background-size: cover;
-  padding: 0;
+  background: url("../assets/img/bg_horarios.jpg") center no-repeat;
 }
+
 .date {
-  background: url("assets/img/bg_citas.jpg") center no-repeat;
+  background: url("../assets/img/bg_citas.jpg") center no-repeat;
   background-attachment: fixed;
 }
 @media only screen and (min-width: 62em) {
@@ -284,6 +322,21 @@
 .date .heading {
   font-family: "Lato", sans-serif;
   font-size: 3.5rem;
+}
+@media only screen and (max-width: 48em) {
+  .date .heading {
+    font-size: 3.15rem;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .date .heading {
+    font-size: 2.975rem;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .date .heading {
+    font-size: 2.8rem;
+  }
 }
 .date .text {
   font-size: 1.2rem;
@@ -302,7 +355,7 @@
 .aside-nosotros {
   height: auto;
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 62em) {
   .aside-nosotros {
     height: 100%;
   }

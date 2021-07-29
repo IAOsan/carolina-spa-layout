@@ -7,12 +7,25 @@
    }
 }
 
+@mixin fontsize($size) {
+   @include respond(768, 'max-width') {
+      font-size: $size - ($size * 0.1);
+   }
+   @include respond(576, 'max-width') {
+      font-size: $size - ($size * 0.15);
+   }
+   @include respond(480, 'max-width') {
+      font-size: $size - ($size * 0.2);
+   }
+}
+
 // ============================
 // variables
 // ============================
 :root {
    // colors
    --c-primary: #e082a8;
+   --c-primary-l: rgba(224, 130, 168, 0.1);
    --c-secondary: #8ed3cc;
    --c-secondary-d: #6ba09b;
    --c-gray-l: #979797;
@@ -28,6 +41,13 @@
 /* -------------------------------------------------------------------------- */
 /*                             general page styles                            */
 /* -------------------------------------------------------------------------- */
+body {
+   background-color: #f8f8f8;
+}
+
+footer {
+   background-color: var(--c-primary-l);
+}
 .main-content p {
    font-size: 1.2rem;
    line-height: 2.2rem;
@@ -44,12 +64,22 @@
       font-size: 3.8rem;
       color: var(--c-primary);
       line-height: 1;
+      @include fontsize(3.8rem);
       span {
          font-family: 'Lato', sans-serif;
          font-size: 2.4rem;
          margin-top: -0.5rem;
          color: #000;
          letter-spacing: 0.1rem;
+         @include respond(768, 'max-width') {
+            font-size: calc(2.4rem - (2.4rem * 0.1));
+         }
+         @include respond(576, 'max-width') {
+            font-size: calc(2.4rem - (2.4rem * 0.15));
+         }
+         @include respond(480, 'max-width') {
+            font-size: calc(2.4rem - (2.4rem * 0.2));
+         }
       }
    }
 }
@@ -318,7 +348,7 @@
 }
 
 .date {
-   background: url('assets/img/bg_citas.jpg') center no-repeat;
+   background: url('../assets/img/bg_citas.jpg') center no-repeat;
    background-attachment: fixed;
    @include respond(992) {
       background-size: cover;
@@ -326,6 +356,7 @@
    .heading {
       font-family: 'Lato', sans-serif;
       font-size: 3.5rem;
+      @include fontsize(3.5rem);
    }
    .text {
       font-size: 1.2rem;
@@ -348,7 +379,7 @@
 
 .aside-nosotros {
    height: auto;
-   @include respond(768, 'min-width') {
+   @include respond(992, 'min-width') {
       height: 100%;
    }
 }
