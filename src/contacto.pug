@@ -3,6 +3,8 @@ block contacto-hero
    +hero('contacto.jpg', 'contacto')
 block contacto-main
    +mainContent('contacto', 'col-lg-8 mx-auto')
+      h2.heading-compound.text-center.mt-5.underline ponte en contacto con
+         span.d-block.text-uppercase nosotros
       form.form--contacto.p-5.my-5.needs-validation(novalidate)
          .form-group
             label.text-capitalize(for="inputName") nombre:
@@ -19,4 +21,5 @@ block contacto-main
             textarea.form-control(id="inputMessage" placeholder="Tu mensaje" required)
             .valid-feedback Correcto
             .invalid-feedback Por favor, escribe un mensaje
-         button.btn.btn-mint.btn-block.p-3.text-uppercase(type="submit") Enviar
+         button.btn.btn-pink.btn-block.p-3.text-uppercase(type="submit")
+            b Enviar

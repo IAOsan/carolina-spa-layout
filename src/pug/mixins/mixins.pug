@@ -1,13 +1,14 @@
 mixin product(img, title='Inserta titulo', price='0.00')
-   article.product.card.px-0
-      a.link(href="producto.html") 
-         img.card-img-top(src=`assets/img/${img}`, alt=title)
+   article.card.product
+      a.link(href='producto.html')
+         .img-wrapper
+            img(src=`assets/img/${img}`, alt=title)
          .card-body
-            h3.heading.card-title.text-center.text-uppercase #{title}
+            h3.card-title.heading.text-center.text-uppercase #{title}
             if block
                block
-            else 
-               p.desc.card-text No description
+            else
+               p.card-text.desc No description
             p.price.lead.text-center.mb-0 #{price}
 
 mixin service(img, title='Inserta titulo')
